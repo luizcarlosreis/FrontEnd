@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><title>Inputs Modernos</title></head>
+<body>
+    <h2>Configurações do Perfil</h2>
+    <form>
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento"><br><br>
+        
+        <label for="cor">Escolha a cor do seu perfil:</label>
+        <input type="color" id="cor" name="cor"><br><br>
+        
+        <label for="volume">Nível de Experiência:</label>
+        <input type="range" id="volume" min="0" max="100" value="50"><br><br>
+
+        <label for="navegador">Navegador favorito:</label>
+        <input list="navegadores" id="navegador" name="navegador">
+        <datalist id="navegadores">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+        </datalist>
+    </form>
+</body>
+</html>
