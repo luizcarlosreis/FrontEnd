@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 15: Consulta de Clima Simulada com Loading</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h4 class="mb-0">Exemplo 15: Consulta de Clima com Spinner de Loading</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Formulário de Busca -->
+                        <form id="formClima" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputCidade" placeholder="Digite a cidade (ex: São Paulo)..." required>
+                                <button class="btn btn-info text-white" type="submit">Buscar</button>
+                            </div>
+                        </form>
+
+                        <!-- Área de Loading (Spinner) -->
+                        <div id="loadingArea" class="text-center py-4 d-none">
+                            <div class="spinner-border text-info" role="status" style="width: 3rem; height: 3rem;">
+                                <span class="visually-hidden">Carregando...</span>
+                            </div>
+                            <p class="text-muted mt-2 mb-0">Buscando dados meteorológicos...</p>
+                        </div>
+
+                        <!-- Card de Resultado do Clima -->
+                        <div id="resultadoClima" class="p-4 bg-white border rounded shadow-sm d-none">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h3 id="nomeCidadeDisplay" class="fw-bold mb-0">Cidade</h3>
+                                <span id="condicaoDisplay" class="badge bg-primary fs-6">Ensolarado</span>
+                            </div>
+                            <div class="display-4 fw-bold text-primary mb-3" id="temperaturaDisplay">
+                                28°C
+                            </div>
+                            <hr class="my-2">
+                            <div class="row text-muted small">
+                                <div class="col-6">Umidade: <strong id="umidadeDisplay" class="text-dark">65%</strong></div>
+                                <div class="col-6">Vento: <strong id="ventoDisplay" class="text-dark">12 km/h</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

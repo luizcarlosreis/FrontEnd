@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 11: Dashboard Responsivo com Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar Responsiva -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="#">📊 EduDashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Visão Geral</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Turmas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Desempenho</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button id="btnAtualizar" class="btn btn-outline-light btn-sm">🔄 Atualizar Dados</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo do Dashboard -->
+    <main class="container-fluid px-4 py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h2 class="fw-bold mb-0">Painel Geral de Alunos</h2>
+                <p class="text-muted mb-0">Visão consolidada de métricas e status de entregas da disciplina.</p>
+            </div>
+            <span class="badge bg-success-subtle text-success border border-success px-3 py-2 fs-6">Semestre Ativo</span>
+        </div>
+
+        <!-- Grid de Cards de Métricas -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card metric-card shadow-sm border-0 border-start border-primary border-4">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase fw-semibold mb-1">Total de Alunos</h6>
+                        <h3 class="fw-bold text-primary mb-0" id="cardAlunos">128</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card metric-card shadow-sm border-0 border-start border-success border-4">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase fw-semibold mb-1">Taxa de Presença</h6>
+                        <h3 class="fw-bold text-success mb-0" id="cardPresenca">94.2%</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card metric-card shadow-sm border-0 border-start border-warning border-4">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase fw-semibold mb-1">Média das Notas</h6>
+                        <h3 class="fw-bold text-warning mb-0" id="cardMedia">8.4</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card metric-card shadow-sm border-0 border-start border-danger border-4">
+                    <div class="card-body">
+                        <h6 class="text-muted text-uppercase fw-semibold mb-1">Tarefas Pendentes</h6>
+                        <h3 class="fw-bold text-danger mb-0" id="cardPendentes">15</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela Estilizada de Entregas -->
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3">
+                <h5 class="card-title fw-bold mb-0">Últimas Atividades Práticas Enviadas</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="ps-4">Aluno</th>
+                                <th>Projeto</th>
+                                <th>Data de Envio</th>
+                                <th>Status</th>
+                                <th class="text-end pe-4">Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaAlunosCorpo">
+                            <!-- Inserido dinamicamente via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

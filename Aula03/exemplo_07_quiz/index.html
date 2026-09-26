@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 07: Quiz de Perguntas e Respostas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">Exemplo 07: Quiz Interativo</h4>
+                        <span id="contadorQuestao" class="badge bg-light text-dark">Questão 1 de 3</span>
+                    </div>
+                    <div class="card-body p-4" id="quizContainer">
+                        <!-- Pergunta -->
+                        <h5 id="perguntaTexto" class="fw-bold mb-4">Carregando pergunta...</h5>
+
+                        <!-- Opções de Resposta -->
+                        <div id="opcoesContainer" class="d-grid gap-2 mb-4">
+                            <!-- Inseridas via JS -->
+                        </div>
+
+                        <!-- Botão Próximo -->
+                        <button id="btnProximo" class="btn btn-primary w-100 py-2 d-none">Próxima Questão</button>
+                    </div>
+
+                    <!-- Tela de Resultado Final -->
+                    <div id="resultadoContainer" class="card-body p-4 text-center d-none">
+                        <h3 class="fw-bold text-success mb-3">Quiz Finalizado! 🎉</h3>
+                        <p class="fs-5 mb-4">Sua pontuação final foi: <strong id="pontuacaoFinal">0</strong> de 3</p>
+                        <button id="btnReiniciar" class="btn btn-outline-primary px-4">Refazer Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

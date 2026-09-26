@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 08: Gerador de Senhas Aleatórias Seguras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-white">
+                        <h4 class="mb-0">Exemplo 08: Gerador de Senhas</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Campo de exibição da senha gerada -->
+                        <div class="input-group mb-4">
+                            <input type="text" id="senhaGerada" class="form-control font-monospace fs-5 text-center" readonly placeholder="Sua senha aparecerá aqui">
+                            <button id="btnCopiar" class="btn btn-outline-secondary" type="button">📋 Copiar</button>
+                        </div>
+
+                        <!-- Opções de configuração -->
+                        <div class="mb-3">
+                            <label for="tamanhoRange" class="form-label">Tamanho da senha: <span id="tamanhoValor" class="fw-bold">12</span> caracteres</label>
+                            <input type="range" class="form-range" id="tamanhoRange" min="6" max="32" value="12">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="incluirSimbolos" checked>
+                            <label class="form-check-label" for="incluirSimbolos">Incluir caracteres especiais (!@#$%^&*)</label>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="incluirNumeros" checked>
+                            <label class="form-check-label" for="incluirNumeros">Incluir números (0-9)</label>
+                        </div>
+
+                        <button id="btnGerar" class="btn btn-dark w-100 py-2 fw-semibold">Gerar Nova Senha</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

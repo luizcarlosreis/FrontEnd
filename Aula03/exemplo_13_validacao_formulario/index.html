@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 13: Formulário com Validação Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Exemplo 13: Validação de Formulário com Bootstrap</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="formCadastro" novalidate>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold">Nome Completo</label>
+                                <input type="text" class="form-control" id="nome" required>
+                                <div class="invalid-feedback">Por favor, informe seu nome.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">E-mail</label>
+                                <input type="email" class="form-control" id="email" required placeholder="seu@email.com">
+                                <div class="invalid-feedback">Por favor, informe um e-mail válido.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha" class="form-label fw-bold">Senha (mínimo 6 caracteres)</label>
+                                <input type="password" class="form-control" id="senha" required minlength="6">
+                                <div class="invalid-feedback">A senha deve ter pelo menos 6 caracteres.</div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="termos" required>
+                                <label class="form-check-label" for="termos">Concordo com os termos e condições</label>
+                                <div class="invalid-feedback">Você deve concordar antes de enviar.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

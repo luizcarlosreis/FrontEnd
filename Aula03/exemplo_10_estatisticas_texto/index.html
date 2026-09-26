@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 10: Painel de Estatísticas de Texto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="mb-0">Exemplo 10: Estatísticas de Texto em Tempo Real</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <label for="textoInput" class="form-label fw-bold">Digite ou cole seu texto abaixo:</label>
+                            <textarea id="textoInput" class="form-control" rows="6" placeholder="Comece a digitar aqui..."></textarea>
+                        </div>
+
+                        <!-- Cards de Estatísticas -->
+                        <div class="row g-3 text-center">
+                            <div class="col-4">
+                                <div class="p-3 border rounded bg-white shadow-sm">
+                                    <h6 class="text-muted mb-1">Caracteres</h6>
+                                    <span id="statCaracteres" class="fs-4 fw-bold text-primary">0</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 border rounded bg-white shadow-sm">
+                                    <h6 class="text-muted mb-1">Palavras</h6>
+                                    <span id="statPalavras" class="fs-4 fw-bold text-success">0</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-3 border rounded bg-white shadow-sm">
+                                    <h6 class="text-muted mb-1">Linhas</h6>
+                                    <span id="statLinhas" class="fs-4 fw-bold text-warning">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

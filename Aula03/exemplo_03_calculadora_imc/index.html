@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 03: Calculadora de IMC Interativa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Exemplo 03: Calculadora de IMC Interativa</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="formImc">
+                            <div class="mb-3">
+                                <label for="peso" class="form-label fw-bold">Peso (kg):</label>
+                                <input type="number" step="0.1" class="form-control" id="peso" placeholder="Ex: 70.5" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="altura" class="form-label fw-bold">Altura (m):</label>
+                                <input type="number" step="0.01" class="form-control" id="altura" placeholder="Ex: 1.75" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 py-2 fw-semibold">Calcular IMC</button>
+                        </form>
+
+                        <!-- Área de Resultado -->
+                        <div id="resultadoArea" class="mt-4 p-3 rounded text-center d-none">
+                            <h5 class="mb-1">Seu IMC: <span id="valorImc" class="fw-bold">0.0</span></h5>
+                            <p id="classificacaoImc" class="mb-0 fs-5 fw-semibold"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 05: Galeria de Imagens com Filtro por Categoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h2 class="text-center mb-4 fw-bold">Exemplo 05: Galeria com Filtro por Categoria</h2>
+        
+        <!-- Botões de Filtro -->
+        <div class="d-flex justify-content-center gap-2 mb-4 flex-wrap">
+            <button class="btn btn-dark active filter-btn" data-filter="all">Todos</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="tecnologia">Tecnologia</button>
+            <button class="btn btn-outline-dark filter-btn" data-filter="natureza">Natureza</button>
+        </div>
+
+        <!-- Grid da Galeria -->
+        <div class="row g-4" id="galeriaGrid">
+            <div class="col-md-4 galeria-item" data-category="tecnologia">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body bg-primary text-white d-flex align-items-center justify-content-center" style="height: 180px;">
+                        <h3>💻 Código / Tech</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Desenvolvimento Web</h5>
+                        <p class="card-text text-muted small">Ambiente de programação moderno com JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 galeria-item" data-category="natureza">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body bg-success text-white d-flex align-items-center justify-content-center" style="height: 180px;">
+                        <h3>🌲 Floresta</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Paisagem Natural</h5>
+                        <p class="card-text text-muted small">Preservação ambiental e ecossistemas verdes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 galeria-item" data-category="tecnologia">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 180px;">
+                        <h3>⚙️ Servidor</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Infraestrutura em Nuvem</h5>
+                        <p class="card-text text-muted small">Sistemas escaláveis e bancos de dados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 galeria-item" data-category="natureza">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body bg-warning text-dark d-flex align-items-center justify-content-center" style="height: 180px;">
+                        <h3>🌊 Oceano</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Praia e Mar</h5>
+                        <p class="card-text text-muted small">Atividades litorâneas e preservação marinha.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
