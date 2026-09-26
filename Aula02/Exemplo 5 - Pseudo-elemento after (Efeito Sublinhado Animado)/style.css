@@ -1,0 +1,19 @@
+.link-animado {
+    position: relative;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+}
+.link-animado::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+.link-animado:hover::after {
+    width: 100%;
+}

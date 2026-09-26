@@ -1,0 +1,11 @@
+.alerta-padrao {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 15px;
+    border-radius: 4px;
+}
+#alerta-urgente {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+}

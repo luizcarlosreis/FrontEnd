@@ -1,0 +1,13 @@
+:root {
+    --cor-sucesso: #27ae60;
+    --raio-borda: 8px;
+    --espacamento-padrao: 16px;
+}
+.alerta-sistema {
+    background-color: #eafaf1;
+    color: var(--cor-sucesso);
+    border-left: 4px solid var(--cor-sucesso);
+    border-radius: 0 var(--raio-borda) var(--raio-borda) 0;
+    padding: var(--espacamento-padrao);
+    font-weight: 500;
+}

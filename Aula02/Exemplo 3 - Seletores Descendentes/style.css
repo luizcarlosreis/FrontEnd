@@ -1,0 +1,10 @@
+.mural-avisos h2 {
+    color: #2980b9;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+.mural-avisos ul li {
+    list-style-type: square;
+    color: #34495e;
+    padding: 5px 0;
+}

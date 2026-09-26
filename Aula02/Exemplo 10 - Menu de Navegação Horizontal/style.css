@@ -1,0 +1,20 @@
+.menu-superior {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eaeaea;
+}
+.lista-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+.lista-menu a {
+    display: block;
+    padding: 15px 25px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+}
+.lista-menu a:hover { color: #3498db; }
